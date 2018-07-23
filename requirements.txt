@@ -1,0 +1,7 @@
+pdfminer.six
+tabula-py
+pandas
+numpy
+django
+unipath
+django-environ
