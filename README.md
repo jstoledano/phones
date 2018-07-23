@@ -1,3 +1,3 @@
 # phones
 
-La aplicación para controlar las notificaciones teleónicas.
+La aplicación para controlar las notificaciones telefónicas.
