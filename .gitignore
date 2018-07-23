@@ -1,6 +1,7 @@
 data/
 src/.env
 src/db.sqlite
+.idea/
 
 # Created by https://www.gitignore.io/api/pycharm,python,django
 
