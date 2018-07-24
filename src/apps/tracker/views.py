@@ -14,22 +14,26 @@ def handle_upload_files(f):
             settings.BASE_DIR.child('temp', 'archivo.pdf'),
             settings.BASE_DIR.child('temp', 'archivo.csv'),
             output_format='csv',
+            java_options=None,
+            pandas_options={
+                'header': None,
+                'names': ('folio_notificacion', 'clave_elector', 'folio', 'paterno', 'materno', 'nombre', 'telefono'),
+                'dtype': {'folio_notificacion': np.str, 'folio': np.str, 'telefono': np.str},
+            },
+            multiple_tables=False,
             pages='all',
             guess=False,
             lattice=True,
             silent=True,
             area=(152.433, 29.004, 592.532, 917.505),
-            pandas_options={
-                'header': None,
-                'names': ('folio_notificacion', 'clave_elector', 'folio', 'paterno', 'materno', 'nombre', 'telefono'),
-                'dtype': {'folio_notificacion': np.str, 'folio': np.str, 'telefono': np.str},
-            }
         )
         return df
 
 
 class ReporteForm(forms.Form):
-    input_file = forms.FileField()
+    remesa = forms.CharField(max_length=7, help_text='El formato es aaaa-rr')
+    mac = forms.CharField(max_length=3, help_text='Los 3 últimos dígitos')
+    archivo_pdf = forms.FileField()
 
 
 class ReporteView(FormView):
@@ -38,6 +42,6 @@ class ReporteView(FormView):
     success_url = '/'
 
     def form_valid(self, form):
-        input_file = form.cleaned_data['input_file']
-        handle_upload_files(input_file)
+        archivo_pdf = form.cleaned_data['archivo_pdf']
+        handle_upload_files(archivo_pdf)
         return super(ReporteView, self).form_valid(form)

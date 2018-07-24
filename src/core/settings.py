@@ -20,7 +20,7 @@ DJANGO_APPS = [
 ]
 THIRD_APPS = []
 LOCAL_APPS = [
-    'apps.llamadas.config.PhonesConfig'
+    'apps.tracker.config.PhonesConfig'
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + LOCAL_APPS
 
