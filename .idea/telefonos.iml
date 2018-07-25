@@ -17,11 +17,14 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/apps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/core" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/apps/llamadas" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/apps/tracker" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/temp" />
     </content>
     <orderEntry type="jdk" jdkName="ubuntu::phones" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="D:\home\Documents\Projects\phonetracker\requirements.txt" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

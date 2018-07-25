@@ -5,7 +5,7 @@
       <paths name="ubuntu::virtual">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/javier/Projects/phones" local="$PROJECT_DIR$" />
+            <mapping deploy="/home/javier/Projects/phones" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

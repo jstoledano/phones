@@ -7,10 +7,9 @@ file = '../data/201834mac290254telefonos.pdf'
 output_format = 'csv'
 output_path = '../data/test.csv'
 options = (
-    ('silent', True),
-    ('pages', 'all'),
-    ('spreadsheet', True),
-    ('area', (152.433,29.004,592.532,917.505))
+    '--silent',
+    '--pages all',
+    '--area 152.433 29.004 592.532 917.505'
 )
 
 df = tabula.read_pdf(
