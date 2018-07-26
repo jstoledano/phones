@@ -13,3 +13,6 @@ class Tracker(models.Model):
     phone = models.CharField('Teléfono', max_length=10)
 
     #
+    distrito = models.CharField(max_length=2)
+    modulo = models.CharField(max_length=6)
+    consecutivo = models.CharField(max_length=5)

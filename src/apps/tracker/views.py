@@ -3,6 +3,7 @@ from django import forms
 from django.conf import settings
 import tabula
 import numpy as np
+from .forms import TrackerForm
 
 
 def handle_upload_files(f):
@@ -38,7 +39,7 @@ class ReporteForm(forms.Form):
 
 class ReporteView(FormView):
     template_name = 'llamadas/index.html'
-    form_class = ReporteForm
+    form_class = TrackerForm
     success_url = '/'
 
     def form_valid(self, form):

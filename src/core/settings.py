@@ -18,7 +18,9 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-THIRD_APPS = []
+THIRD_APPS = [
+    'crispy_forms',
+]
 LOCAL_APPS = [
     'apps.tracker.config.PhonesConfig'
 ]
@@ -95,3 +97,6 @@ EMAIL_HOST = env('EMAIL_HOST')
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = env('EMAIL_PORT')
+
+# CRISPY FORMS SETTINGS
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

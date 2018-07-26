@@ -5,3 +5,4 @@ numpy
 django
 unipath
 django-environ
+django-crispy-forms
